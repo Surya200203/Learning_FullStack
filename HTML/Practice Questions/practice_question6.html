@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Practice Question 6</title>
+	</head>
+	<body>
+		<h1>Practice Question 6</h1>
+		<h2>Question</h2>
+		<p>Recreate the following form with sutiable elements & input types ?</p>
+		<img src="form.png" alt="Form question image" />
+		<hr />
+		<h2>Answer</h2>
+		<h3>Registration Form</h3>
+		<form action="">
+			<div>
+				<input type="text" name="fn" id="firstname" placeholder="First Name" />
+				<input type="text" name="ln" id="lastname" placeholder="Last Name" />
+			</div>
+			<div>
+				<label for="gender">Please select your gender</label>
+				<select name="gender" id="gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="others">Others</option>
+				</select>
+			</div>
+			<div>
+				<label for="agree">Do you agree to all terms of service? </label>
+				<input type="checkbox" name="agree" id="agree" value="yes" checked/>
+				<label for="agree"> Yes, I agree</label>
+			</div>
+			<button type="submit">Register</button>
+		</form>
+	</body>
+</html>
