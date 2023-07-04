@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Practice Question 7</title>
+	</head>
+	<body>
+		<h1>Practice Question 7</h1>
+		<h2>Question 1</h2>
+		<p>Recreate the following table using HTML ?</p>
+		<img src="pq_table.png" alt="table image" />
+		<h3>Answer 1:</h3>
+		<table border="black">
+			<caption>
+				Student Infromation
+			</caption>
+
+			<tr>
+				<th rowspan="6">Info</th>
+				<th rowspan="2">Name</th>
+				<th colspan="2">Address</th>
+			</tr>
+			<tr>
+				<th>City</th>
+				<th>House</th>
+			</tr>
+
+			<tr>
+				<td>A</td>
+				<td>Delhi</td>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>B</td>
+				<td>Mumabi</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>C</td>
+				<td>Kolkata</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>D</td>
+				<td>Pune</td>
+				<td>4</td>
+			</tr>
+		</table>
+		<hr />
+		<h2>Question 2</h2>
+		<p>Recreate the following form using HTML ?</p>
+		<img src="form1.png" alt="from image" />
+		<h3>Answer :</h3>
+		<form action="">
+			<div>
+				<label for="name">Name :</label>
+				<input type="text" name="name" id="name" />
+			</div>
+			<br />
+			<div>
+				Sex :
+				<input type="radio" name="sex" id="sex_male" value="male" />
+				<label for="sex_male">Male</label>
+				<input type="radio" name="sex" id="sex_female" value="female" />
+				<label for="sex_female">Female</label>
+			</div>
+			<br />
+			<div>
+				<label for="country">Country :</label>
+				<select name="country" id="country">
+					<option>select an option</option>
+					<option value="india">India</option>
+					<option value="usa">USA</option>
+					<option value="nepal">Nepal</option>
+					<option value="france">France</option>
+				</select>
+			</div>
+			<br />
+			<div>
+				<label for="message">Message :</label><br />
+				<textarea name="message" id="message" cols="50" rows="5"></textarea>
+			</div>
+			<br />
+			<div>
+				<input type="checkbox" name="subscribe" id="subscribe" value="yes" />
+				<label for="subscribe">Subscribe ?</label>
+			</div>
+			<br />
+			<button>Submit</button>
+		</form>
+		<hr />
+		<h2>Question 3</h2>
+		<p>Recreate the following form using HTML ?</p>
+		<img src="form2.png" alt="from image" />
+		<h3>Answer :</h3>
+		<form action="">
+			<h2>Feedback Form</h2>
+			<div>
+				<label for="name">Name:</label>
+				<input
+					type="text"
+					name="name"
+					id="name"
+					placeholder="Write your name"
+				/>
+			</div>
+			<br />
+			<div>
+				<label for="email">Email:</label>
+				<input
+					type="email"
+					name="email"
+					id="email"
+					placeholder="Write your email"
+				/>
+			</div>
+			<br />
+			<div>
+				<label for="message">Message:</label><br />
+				<textarea name="message" id="message" cols="40" rows="5"></textarea>
+			</div>
+			<br />
+			<div>
+				Rate us out of 5 :
+				<div>
+					<input type="radio" name="rating" id="one_rating" value="1"/>
+					<label for="one_rating">1</label>
+				</div>
+				<div>
+					<input type="radio" name="rating" id="two_rating" value="2"/>
+					<label for="two_rating">2</label>
+				</div>
+				<div>
+					<input type="radio" name="rating" id="three_rating" value="3"/>
+					<label for="three_rating">3</label>
+				</div>
+				<div>
+					<input type="radio" name="rating" id="four_rating" value="4"/>
+					<label for="four_rating">4</label>
+				</div>
+				<div>
+					<input type="radio" name="rating" id="five_rating" value="5"/>
+					<label for="five_rating">5</label>
+				</div>
+			</div><br>
+            <button>Send your message!</button>
+		</form>
+	</body>
+</html>
