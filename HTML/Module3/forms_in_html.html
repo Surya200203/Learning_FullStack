@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms in Html</title>
+	</head>
+	<body>
+		<h1>Forms in HTML</h1>
+		<ul>
+			<li>Forms are used to collect data from users.</li>
+			<li>&lt;form&gt; tag are used to create from.</li>
+			<li>
+				<h3>Action Attribute :</h3>
+				<ul>
+					<li>
+						Action Attribute is used to define what action needs to be performed
+						when a form is submitted or where the form data should be sent.
+					</li>
+					<li><b>&lt;from</b> action="/action.php" <b>&gt;</b></li>
+					<li><b>&lt;from</b> action="/action" <b>&gt;</b></li>
+				</ul>
+			</li>
+			<li>
+				<h3>Form Elements :</h3>
+				<ul>
+					<li>
+						<h4>Input</h4>
+						<ul>
+							<li>Used to create multiple form controls.</li>
+							<li>
+								There are multiple types of inputs that can be created using
+								type attribute.
+							</li>
+							<li>
+								Type attribute :
+								<ul type="disc">
+									<li>&lt;input&gt;</li>
+									<li>&lt;input type="text"&gt;</li>
+									<li>&lt;input type="password"&gt;</li>
+									<li>&lt;input type="number"&gt;</li>
+									<li>&lt;input type="time"&gt;</li>
+									<li>&lt;input type="color"&gt;</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Placeholder Attribute</h4>
+						<ul type="disc">
+							<li>&lt;input type="text" placeholder="Enter Name "&gt;</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Label</h4>
+						<ul type="disc">
+							<li>
+								Label Element represents a caption for an item in a user
+								interface.
+							</li>
+							<li>
+								&lt;label&gt;<br />
+								&emsp;&emsp;Enter your username : <br />
+								&emsp;&emsp;&lt;input type="text" placeholder="username"&gt;<br />
+								&lt;&#47;label&gt;
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Button</h4>
+						<ul type="disc">
+							<li>&lt;button&gt; Submit &lt;&#47;button&gt;</li>
+							<li>
+								type attribute :
+								<ul>
+									<li>
+										&lt;button type="submit"&gt; Submit &lt;&#47;button&gt;
+									</li>
+									<li>
+										&lt;button type="button"&gt; Do Something
+										&lt;&#47;button&gt;
+									</li>
+									<li>&lt;button type="reset"&gt; Reset &lt;&#47;button&gt;</li>
+								</ul>
+							</li>
+							<li>
+								Button using Input :
+								<ul>
+									<li>&lt;input type="submit" &gt;</li>
+									<li>&lt;input type="submit" value="click me" &gt;</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>name Attribute</h4>
+						<ul>
+							<li>Name of form control</li>
+							<li>submitted with the form as part of a name/value pair</li>
+							<li>
+								&lt;input type="text" placeholder="enter name" id="username"
+								name="username"&#47;&gt;
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Checkbox Attribute</h4>
+						<ul>
+							<li>
+								&lt;input type="checkbox" name="age" id="age" checked &#47;&gt;
+							</li>
+							<li>&lt;label for="age"&gt; I am 18+ &lt;&#47;label&gt;</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Radio Button</h4>
+						<ul>
+							<li>
+								&lt;input type="radio" name="fruit" id="apple" value="apple"
+								&#47;&gt;
+							</li>
+							<li>&lt;label for="apple"&gt; Apple &lt;&#47;label&gt;</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Dropdowns</h4>
+						<ul>
+							<li>&lt;select name="profession" id="profession"&gt;</li>
+							<li>
+								&emsp;&emsp;&lt;option vlaue="student"&gt; Student
+								&lt;&#47;option&gt;
+							</li>
+							<li>
+								&emsp;&emsp;&lt;option vlaue="developer"&gt; Developer
+								&lt;&#47;option&gt;
+							</li>
+							<li>&lt;&#47;select&gt;</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Range</h4>
+						<ul>
+							<li>&lt;label for="volume"&gt; Volume &lt;&#47;label&gt;</li>
+							<li>
+								&lt;input type="range" min="0" max="100" name="volume" &#47;&gt;
+							</li>
+						</ul>
+					</li>
+					<li>
+						<h4>Text Area</h4>
+						<ul>
+							<li>
+								&lt;label for="feedback"&gt; Please provide your valuable
+								feedback : &lt;&#47;label&gt;
+							</li>
+							<li>
+								&lt;textarea name="feedback" id="feedback" cols="30"
+								rows="10"&gt;&lt;&#47;textarea&gt;
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<hr />
+		<h2>Example</h2>
+		<form action="/action">
+			<div>
+				<label for="username">Username :</label>
+				<input type="text" id="username" name="username" />
+			</div>
+			<div>
+				<label for="password">Password :</label>
+				<input type="password" id="password" name="password" />
+			</div>
+			<div>
+				<label for="emailid">Email :</label>
+				<input type="email" id="emailid" name="emailid" />
+			</div>
+			<div>
+				<label for="dob">DOB :</label>
+				<input type="date" id="dob" name="dob" />
+			</div>
+			<div>
+				<input type="checkbox" name="age" id="age" checked />
+				<label for="age"> I am 18+</label>
+			</div>
+			<div>
+				<label for="idproof">Id Proof:</label>
+				<input type="file" id="idproof" name="idproof" />
+			</div>
+			<button>Submit</button>
+			<div>
+				<input type="button" value="Click Me!" />
+			</div>
+		</form>
+		<hr />
+		<h2>Searching content from youtube using form</h2>
+		<form action="https://www.youtube.com/results">
+			<label for="search">Search : </label>
+			<input type="text" name="search_query" id="search" />
+			<button>Search</button>
+		</form>
+		<hr />
+		<h2>Radio Button</h2>
+		<form action="">
+			<p>Select fruit you need in breakfast :</p>
+			<div>
+				<input type="radio" name="fruit" id="apple" value="apple" />
+				<label for="apple">Apple</label>
+
+				<input type="radio" name="fruit" id="mango" value="mango" />
+				<label for="mango">Mango</label>
+
+				<input type="radio" name="fruit" id="orange" value="orange" />
+				<label for="orange">Orange</label>
+
+				<input type="radio" name="fruit" id="grapes" value="grapes" />
+				<label for="grapes">Grapes</label>
+			</div>
+
+			<button>Submit</button>
+		</form>
+		<hr />
+		<h2>Dropdowns</h2>
+		<form action="">
+			<div>
+				<label for="profession">Choose your profession :</label>
+				<select name="profession" id="profession">
+					<option>select your option</option>
+					<option value="student">Student</option>
+					<option value="develpoer">Developer</option>
+					<option value="teacher">Teacher</option>
+					<option value="army officer">Army Officer</option>
+				</select>
+			</div>
+			<button>Submit</button>
+		</form>
+		<hr />
+		<h2>Range</h2>
+		<form action="">
+			<div>
+				<label for="volume"> Volume of Home :</label>
+				<input type="range" name="volume" id="volume" min="0" max="100" />
+			</div>
+			<button>Submit</button>
+		</form>
+		<hr />
+		<h2>Text Area</h2>
+		<form action="">
+			<div>
+				<label for="feedback">Please provide your valuable feedback : </label><br>
+				<textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+			</div>
+		</form>
+	</body>
+</html>
+
+<!-- http://127.0.0.1:5500/action?username=sanket20112036%40gmail.com&password=sanket&emailid=adesh20%40gmail.com&dob=2023-07-05&idproof=Python-Object-Oriented-Programming-Build-robust-and-maintainable-object-oriented-Python-applications-and-libraries-by-Steven-F.-Lott%2C-Dusty-Phillips-%28bibis.ir%29.pdf -->
