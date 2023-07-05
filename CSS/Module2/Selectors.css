@@ -1,0 +1,24 @@
+body {
+	background-color: #333a46;
+}
+h1 {
+	color: orange;
+	font-family: papyrus;
+}
+li,
+p {
+	color: rgb(255, 255, 255);
+	font-size: large;
+	line-height: 1.5;
+	font-family: cursive;
+}
+h2 {
+	font-family: cursive;
+	color: #00bef5;
+	text-decoration: solid underline white;
+}
+
+span {
+	color: orange;
+}
+
