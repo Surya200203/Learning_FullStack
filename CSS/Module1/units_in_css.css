@@ -1,0 +1,19 @@
+body{
+    background-color:#333a46
+}
+h1{
+    color: orange;
+}
+li,p{
+    color: rgb(255, 255, 255);
+    font-size: large;
+    line-height: 1.5;
+}
+h2{
+    color: #00bef5;
+    text-decoration: solid underline white;
+}
+
+span{
+    color:orange;
+}
