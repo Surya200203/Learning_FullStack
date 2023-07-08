@@ -1,0 +1,27 @@
+body {
+	background-color: #5a6d6b;
+	font-family: cursive;
+	color: white;
+	font-size: large;
+}
+h1 {
+	color: orange;
+}
+h2 {
+	color: aquamarine;
+}
+
+span {
+	color: rgb(212, 154, 46);
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: coral;
+    border-radius: 10px;
+    /* border: 2px solid white; */
+    margin: 40px ;
+    box-shadow: 5px 5px 9px whitesmoke;
+}

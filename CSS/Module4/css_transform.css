@@ -1,0 +1,59 @@
+body {
+	background-color: #5a6d6b;
+	font-family: cursive;
+	color: white;
+	font-size: large;
+}
+h1 {
+	color: orange;
+}
+h2 {
+	color: aquamarine;
+}
+
+span {
+	color: rgb(212, 154, 46);
+}
+
+div {
+	height: 200px;
+	width: 200px;
+	border: 5px solid white;
+	margin-top: 60px;
+	margin-left: 50px;
+	background-color: coral;
+	/* transition: border-radius 3s ease 1s; */
+}
+
+#one:hover {
+	/* border-radius: 50%; */
+	transform: rotate(-45deg);
+	transition-duration: 2s;
+}
+#two:hover {
+	/* border-radius: 50%; */
+	transform: scale(0.5);
+	transition-duration: 2s;
+}
+#three:hover {
+	/* border-radius: 50%; */
+	transform: translateX(200px);
+	transition-duration: 2s;
+}
+#four:hover {
+	/* border-radius: 50%; */
+	transform: skew(30deg);
+	transition-duration: 2s;
+}
+#five:hover {
+	border-radius: 50%;
+	transform: rotate(-45deg) scale(0);
+	transition-duration: 3.5s;
+	transform: scale(0) rotate(-45deg) skew(30deg);
+}
+
+.div_p {
+	margin-top: 40%;
+	margin-left: 49%;
+	
+}

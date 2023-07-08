@@ -1,0 +1,23 @@
+body {
+	background-color: #5a6d6b;
+	font-family: cursive;
+    color: white;
+    font-size: large;
+    
+}
+
+div{
+    height: 100px;
+    width: 100px;
+    background-color: greenyellow;
+    margin-top: 10px;
+    margin: 0 auto;  /* shortcut to brings in center*/
+    /* transition-duration : 2s; 1s = 1 second */
+    transition: margin-top 2s ease-in 0.2s;
+}
+
+div:hover{
+    margin-top: 180px;
+    background-color: pink;
+    border-radius: 50%;
+}

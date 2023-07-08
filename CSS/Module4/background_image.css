@@ -1,0 +1,24 @@
+body {
+	background-color: #5a6d6b;
+	font-family: cursive;
+	color: white;
+	font-size: large;
+}
+h1 {
+	color: orange;
+}
+h2 {
+	color: aquamarine;
+}
+
+span {
+	color: rgb(212, 154, 46);
+}
+div{
+    width: 500px;
+    height: 300px;
+    background-color:#7aa874;
+    margin: 10px auto;
+    background-image: url("images/b_image.jpg");
+    background-size: contain;
+}
