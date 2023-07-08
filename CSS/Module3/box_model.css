@@ -1,0 +1,48 @@
+body {
+	background-color: #5a6d6b;
+	font-family: cursive;
+}
+h1 {
+	color: orange;
+	font-weight: bold;
+}
+
+h2 {
+	color: #00bef5;
+	text-decoration: solid underline white;
+}
+
+p {
+	color: white;
+	line-height: 1.5;
+	font-size: large;
+}
+ul li {
+	color: white;
+	font-size: large;
+	line-height: 1.5;
+}
+
+span {
+	color: orange;
+}
+
+img[alt='border shorthand image'] {
+	height: 200px;
+}
+
+img[alt='padding 1'] {
+	height: 200px;
+}
+
+img[alt='border radius'] {
+	height: 250px;
+}
+
+img[alt='padding 2'] {
+	height: 100px;
+}
+
+img[alt='padding shorthand'] {
+	height: 300px;
+}

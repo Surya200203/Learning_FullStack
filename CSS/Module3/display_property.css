@@ -1,0 +1,24 @@
+span{
+    /* background-color: rgb(107, 107, 225); */
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    padding: 50px;
+    margin: 20px;
+}
+
+/* so in above code the margin and padding only set from left and right side but top and bottom sides get overlap with paragraph content */
+
+
+div{
+    background-color: rgb(107, 107, 225);
+    border: 2px solid black;
+    height: 100px;
+    width: 200px;
+    padding: 50px;
+    margin: 20px;
+}
+
+img{
+    height: 250px;
+}

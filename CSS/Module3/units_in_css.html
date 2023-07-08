@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Units in Html</title>
+		<link rel="stylesheet" href="units_in_css.css" />
+	</head>
+	<body>
+		<h1>Unit in HTML</h1>
+		<h2>Relative Units</h2>
+		<ol>
+			<li>
+				Percentage (%)
+				<ul>
+					<li>
+						It is often used to define a
+						<b>size as relative to an element's parent</b> object
+					</li>
+					<li>
+						eg :-
+						<ul>
+							<li>width : 33.33% (relative to parent)</li>
+							<li>margin-left : 50% (relative to the parent size)</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				Em
+				<ul>
+					<li>
+						Font size of the parent, in the case of typographical properties
+						like font-size , and font size of the element itself, in the case of
+						the other peoperties like width.
+					</li>
+				</ul>
+			</li>
+		</ol>
+		<hr />
+		<h3>Heading</h3>
+		<div id="outer">
+			<div id="inner"></div>
+		</div>
+		<hr />
+		<h2>Em example</h2>
+		<div id="outer_div">
+			This is outer div
+			<div id="inner_div">This is inner div</div>
+		</div>
+		<img src="images/em.png" alt="em concept" />
+		<p>Drawback of EM :</p>
+		<ul>
+			<li>Snowball effect in nested elements.</li>
+		</ul>
+		<h2>Root Em</h2>
+		<ul>
+			<li>Font size will set of root element</li>
+		</ul>
+	</body>
+</html>
