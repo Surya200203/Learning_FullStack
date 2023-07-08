@@ -1,0 +1,7 @@
+li{
+    display: inline;
+    border: 2px solid black;
+    padding: 2px;
+    background-color: rgb(174, 18, 107);
+    color: white;
+}
