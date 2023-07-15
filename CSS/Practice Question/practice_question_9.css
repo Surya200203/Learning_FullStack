@@ -1,0 +1,22 @@
+.container{
+    width: 400px;
+    height: 400px;
+    border: 2px solid aqua;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}   
+
+.container div{
+    height: 100px;
+    width: 100px;
+    border:2px solid black;
+    border-radius: 7px;
+    flex-wrap: wrap;
+    font-size: 50px;
+    background-color: grey;
+    text-align: center;
+}
