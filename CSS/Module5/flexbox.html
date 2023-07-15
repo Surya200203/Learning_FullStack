@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flexbox</title>
+		<link rel="stylesheet" href="flexbox.css" />
+	</head>
+	<body>
+		<h1>Flexbox</h1>
+		<ul>
+			<li>Flexible Box Layout</li>
+			<li>
+				It is a one-dimensional layout method for arranging itmes in rows or
+				columns.
+			</li>
+		</ul>
+		<h2>The Flex Model</h2>
+		<img src="images/flex_model.png" alt="flex model" />
+		<hr />
+		<h2>Flexbox Direction</h2>
+		<p>
+			It sets <b>how flex items are placed </b> in the flex container, along
+			with axis and direction
+		</p>
+		<ul>
+			<li>flexbox-direction : row; (main axis,left to right)</li>
+			<li>flexbox-direction : row-reverse; (main axis,right to left)</li>
+			<li>flexbox-direction : column; (cross axis,top to bottom)</li>
+			<li>flexbox-direction : column-reverse; (cross axis,bottom to top)</li>
+		</ul>
+		<h2>Justify content</h2>
+		<p>
+			Tells how the borwser <b>distributes space </b> between and around content
+			items along the main-axis.
+		</p>
+
+		<ul>
+			<li>justify-content : flex-start;</li>
+			<li>justify-content : flex-end;</li>
+			<li>justify-content : center;</li>
+			<li>justify-content : space-between;</li>
+			<li>justify-content : space-aroud;</li>
+			<li>justify-content : space-evenly;</li>
+		</ul>
+		<h2>Flex Wrap</h2>
+		<p>
+			Sets whether flex items are <b>forced onto one line or can wrap</b> onto
+			multiple lines
+		</p>
+		<ul>
+			<li>flex-wrap : nowrap;</li>
+			<li>flex-wrap : wrap;</li>
+			<li>flex-wrap : wrap-reverse;</li>
+		</ul>
+		<h2>Align content</h2>
+
+		<ul>
+			<li>align-content : flex-start;</li>
+			<li>align-content : flex-end;</li>
+			<li>align-content : center;</li>
+			<li>align-content : baseline;</li>
+		</ul>
+		<h2>Align Self</h2>
+		<p>Aligns an item along the cross-axis.</p>
+		<ul>
+			<li>align-self : flex-start;</li>
+			<li>align-self : flex-end;</li>
+			<li>align-self : center;</li>
+			<li>align-self : baseline;</li>
+		</ul>
+		<h2>Flex Sizing</h2>
+		<ul>
+			<li>
+				flex-basis :
+				<ul>
+					<li>It sets initial main size of a flex item.</li>
+					<li>flex-basis : 100px;</li>
+				</ul>
+			</li>
+			<li>
+				flex-grow :
+				<ul>
+					<li>It specifies how much of the flex container's remaining space should be assigned to the flex item's main size</li>
+					<li>flex-grow : 1;</li>
+				</ul>
+			</li>
+		</ul>
+		<h2>Flex Shorthand</h2>
+		<img src="images/flex_shrink.png" alt="flex shrink image">
+		<hr />
+		<h1>Flexbox Playground</h1>
+		<div id="container">
+			<div style="background-color: #9400d3">voilet</div>
+			<div style="background-color: #4b0082">indigo</div>
+			<div style="background-color: #0000ff">blue</div>
+			<div style="background-color: #00ff00">green</div>
+			<div style="background-color: #ffff00">yellow</div>
+			<div id="org" style="background-color: #ff7f00">orange</div>
+			<div style="background-color: #ff0000">red</div>
+		</div>
+	</body>
+</html>
