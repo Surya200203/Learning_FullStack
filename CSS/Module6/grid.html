@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid</title>
+		<link rel="stylesheet" href="grid.css" />
+	</head>
+	<body>
+		<h1>Grid</h1>
+		<p>
+			Setting a container's display to grid will make all children gird items.
+		</p>
+		<img src="images/grid_container.png" alt="grid container" />
+		<h2>Grid Template</h2>
+		<p>They define the lines & track sizing.</p>
+		<ul>
+			<li>grid-template-rows : 100px 100px 100px ;</li>
+			<li>grid-template-columns : 100px 200px 200px ;</li>
+		</ul>
+		<p>Repeat is used to divide all available spaces</p>
+		<ul>
+			<li>grid-template-rows : repeat(count,1fr);</li>
+			<li>grid-template-columns : repeat(count,1fr);</li>
+			<li>grid-template-columns : repeat(2,1fr);</li>
+			<li>grid-template-columns : 1fr 1fr;</li>
+		</ul>
+		<h2>Grid Gaps</h2>
+		<p>They define the gaps between the lines</p>
+		<ul>
+			<li>row-gap</li>
+			<li>column-gap</li>
+			<li>grid-gap : rowGap columnGap;</li>
+		</ul>
+		<h2>Grid Columns</h2>
+		<p>Defines an item's starting & ending position inside the column</p>
+		<ul>
+			<li>grid-column-start : line_number;</li>
+			<li>grid-column-end : line_number;</li>
+			<li>grid-column : start_col/end_col;</li>
+			<li>grid-column : start_col/span number;</li>
+		</ul>
+		<h2>Grid Rows</h2>
+		<p>Defines an item's starting & ending position inside the row</p>
+		<ul>
+			<li>grid-row-start : line_number;</li>
+			<li>grid-row-end : line_number;</li>
+			<li>grid-row : start_row/end_col;</li>
+			<li>grid-row : start_row/span number;</li>
+		</ul>
+		<hr />
+		<h2>Grid Playground</h2>
+		<div class="container">
+			<div class="items one">1</div>
+			<div class="items two">2</div>
+			<div class="items">3</div>
+			<div class="items">4</div>
+			<div class="items">5</div>
+		</div>
+	</body>
+</html>
