@@ -49,6 +49,13 @@ app.get("/mango",(req,res)=>{
 
     })
 });
+
 app.get("*",(req,res)=>{
     res.send("ThisPath does not exist.")
+})
+
+// app.post() request
+
+app.post("/",(req,res)=>{
+    res.send("You sent a post request.");
 })
