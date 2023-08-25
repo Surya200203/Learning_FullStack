@@ -1,2 +1,2 @@
 # Full_Stack_Tutorial
-I am learning full stack web development from apna college
+I am learning full stack web development.
