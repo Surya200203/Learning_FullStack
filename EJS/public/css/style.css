@@ -1,0 +1,15 @@
+body {
+	background-color: pink;
+}
+img {
+	width: 200px;
+	height: 200px;
+}
+h3 {
+	text-align: center;
+}
+.outer-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
