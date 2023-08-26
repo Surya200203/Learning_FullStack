@@ -23,14 +23,13 @@ app.use((req, res) => {
 		price: '100',
 	});
     });
-*/
 
 // app.get(path,callback)
 
  //using get
 
 app.get("/",(req,res)=>{
-    res.send("You contacted root path");
+    res.send("Hello,  I am root.");
 })
 
 app.get("/apple",(req,res)=>{
@@ -58,4 +57,28 @@ app.get("*",(req,res)=>{
 
 app.post("/",(req,res)=>{
     res.send("You sent a post request.");
+})
+*/
+
+app.get("/",(req,res)=>{
+    res.send("<h1>Hello, I am root.</h1>");
+}
+);
+
+// Path parameters
+
+app.get("/:username/:id",(req,res)=>{
+    // console.log(req.params);
+    let {username,id} = req.params;
+    let htmlStr = `<h1>Welcome to the page of @${username}.</h1>`;
+    res.send(htmlStr);
+});
+
+//
+app.get("/:search",(req,res)=>{
+    let {q} = req.query;
+    if(!q){
+        res.send("<h1>No search query</h1>");
+    }
+    res.send(`<h1>These are the results for ${q}</h1>`);
 })
