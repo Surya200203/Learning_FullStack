@@ -1,5 +1,12 @@
 const { faker } = require('@faker-js/faker');
 const mysql = require('mysql2');
+const express = require('express');
+const app = express();
+let port = 8080;
+const path = require('path');
+
+app.set("view engine","ejs");
+app.set("views",path.join(__dirname,"/views"))
 
 // create the connection to database
 const connection = mysql.createConnection({
@@ -9,50 +16,40 @@ const connection = mysql.createConnection({
 	password: 'mysql@12',
 });
 
-//Query
+//get request for home (HOME ROUTE)
 
-// for single user insertion
-// let q = "INSERT INTO user(id,username,email,password) VALUES (?,?,?,?)";
-// let user = ["123","123_newuser","abc@gmail.com","abc"];
+app.get('/', (req, res) => {
+	let q = 'SELECT count(*) FROM user';
+	try {
+		connection.query(q, (err, result) => {
+			if (err) throw err;
+			let count = result[0]['count(*)'];
+			res.render("home.ejs",{count});  // rendering home.ejs and passing count to home.ejs
+		});
+	} catch (err) {
+		console.log(err);
+		res.send('some error in database');
+	}
+});
 
-// for multiple user insertion
-// let q = "INSERT INTO user(id,username,email,password) VALUES ?";
-// let users = [["123c","123_newuserc","abc@gmail.comc","abcc"],["123b","123_newuserb","abc@gmail.comb","abcb"]];
+//get request for getting all user's data (USERS ROUTE)
 
+app.get('/user', (req, res) => {
+	let q = 'SELECT * FROM user';
+	try {
+		connection.query(q, (err, result) => {
+			if (err) throw err;
+			let users = result;
+			res.render("users.ejs",{users}); 
+			 
+		});
+	} catch (err) {
+		console.log(err);
+		res.send('some error in database');
+	}
+});
 
-// generating random data
-
-let getRandomUser = () => {
-	return [
-		faker.datatype.uuid(),
-		faker.internet.userName(),
-		faker.internet.email(),
-		faker.internet.password(),
-	];
-};
-
-
-//using facker (bulk insertion)
-let q = "INSERT INTO user(id,username,email,password) VALUES ?";
-
-let data =[];
-
-for(let i=1;i<=100;i++){
-    data.push(getRandomUser()); // 100 fake users data
-    
-}
-
-try {
-	connection.query(q, [data], (err, result) => {
-		if (err) throw err;
-		console.log(result);
-	});
-} catch (err) {
-	console.log(err);
-}
-
-connection.end(); //to end connection with mysql
-
-
-
-
+//starting server
+app.listen(port, () => {
+	console.log(`App listening at portn ${port}`);
+});
