@@ -4,7 +4,10 @@ const express = require('express');
 const app = express();
 let port = 8080;
 const path = require('path');
+const methodOverride = require("method-override");
 
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({extended: true})); // to parse patch request data
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/views"))
 
@@ -48,6 +51,55 @@ app.get('/user', (req, res) => {
 		res.send('some error in database');
 	}
 });
+
+//EDIT ROUTE
+
+app.get("/user/:id/edit",(req,res)=>{
+	let {id} =req.params;
+	let q1 = `SELECT * FROM user WHERE id='${id}'`;
+	try {
+		connection.query(q1, (err, result) => {
+			if (err) throw err;
+			let user = result[0];
+			// console.log(user);
+			res.render('editForm.ejs',{user});
+		});
+	} catch (err) {
+		console.log(err);
+		res.send('some error in database');
+	}
+	
+})
+
+//Update (DB) route
+
+app.patch("/user/:id",(req,res)=>{
+	let {id} = req.params;
+	let q2 = `SELECT * FROM user WHERE id='${id}'`;
+	let { password: fromPassword, username: newUsername } = req.body;
+
+	try {
+		connection.query(q2, (err, result) => {
+			if (err) throw err;
+			let user = result[0];
+			if(fromPassword != user.password){
+				res.send("WRONG password")
+			}else{
+				let q3 = `UPDATE user SET username='${newUsername}' WHERE id='${id}'`;
+				connection.query(q3,(err,result)=>{
+					if(err) throw err;
+					res.redirect("/user");
+				});
+			}
+
+		});
+	} catch (err) {
+		console.log(err);
+		res.send('some error in database');
+	}
+
+})
+
 
 //starting server
 app.listen(port, () => {
